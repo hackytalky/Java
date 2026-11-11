@@ -1,0 +1,29 @@
+package excemption.com;
+import java.util.*;
+
+public class exceptionHandling {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		int num1 = 0,num2 = 0;
+		try {
+			int results = multiplyNumber(10,2);
+			if(num2 != 0) {
+				System.out.println("Results: " + results);
+			}
+			
+			
+		}
+		catch(NumberFormatException  e) {
+			System.out.println("This is not an interger.");
+		}
+		
+		System.out.println("It ends here!");
+	}
+	
+	public static int multiplyNumber(int a, int b) {
+		return a * b;
+	}
+
+}

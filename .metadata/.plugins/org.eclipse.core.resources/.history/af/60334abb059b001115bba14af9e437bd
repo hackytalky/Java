@@ -1,0 +1,23 @@
+package com.Loop;
+
+public class Exercise7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j,divide;
+	
+		for(i = 1;i<=8;i++) {
+			for(j = i;j<= 2 *(8-1);j++) {
+				System.out.print(" ");
+			}
+			for(j = i;j>=8;j--) {
+				divide = j * 3;
+				System.out.print(divide +  " ");
+			}
+			System.out.println();
+		}
+		
+		
+	}	
+
+}

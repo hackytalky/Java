@@ -1,0 +1,4 @@
+#Fri Jul 17 20:15:20 PST 2026
+__DEFAULT__=false
+expression=A package name must be specified for a module.
+org.eclipse.help.ui.localSearch.master=true

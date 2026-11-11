@@ -1,0 +1,109 @@
+package excemption.com;
+
+
+//Custom checked exception
+class InsufficientFundsException extends Exception {
+ private double shortfall;
+
+ public InsufficientFundsException(String message, double shortfall) {
+     super(message);
+     this.shortfall = shortfall;
+ }
+
+ public double getShortfall() {
+     return shortfall;
+ }
+}
+
+//Parent class
+abstract class Account {
+ protected String owner;
+ protected double balance;
+
+ Account(String owner, double balance) {
+     this.owner = owner;
+     this.balance = balance;
+ }
+
+ // Unchecked exception: bad argument is a programming error
+ void deposit(double amount) {
+     if (amount <= 0) {
+         throw new IllegalArgumentException("Deposit must be positive.");
+     }
+     balance += amount;
+ }
+
+ // Checked exception declared in the parent
+ abstract void withdraw(double amount) throws InsufficientFundsException;
+}
+
+//Child 1: cannot go below zero
+class SavingsAccount extends Account {
+ SavingsAccount(String owner, double balance) {
+     super(owner, balance);
+ }
+
+ @Override
+ void withdraw(double amount) throws InsufficientFundsException {
+     if (amount > balance) {
+         throw new InsufficientFundsException(
+             "Savings: not enough funds.", amount - balance);
+     }
+     balance -= amount;
+ }
+}
+
+//Child 2: allows overdraft up to a limit
+class CheckingAccount extends Account {
+ private double overdraftLimit = 500;
+
+ CheckingAccount(String owner, double balance) {
+     super(owner, balance);
+ }
+
+ @Override
+ void withdraw(double amount) throws InsufficientFundsException {
+     double available = balance + overdraftLimit;
+     if (amount > available) {
+         throw new InsufficientFundsException(
+             "Checking: overdraft limit exceeded.", amount - available);
+     }
+     balance -= amount;
+ }
+}
+
+public class exceptionhandlingwithInheritanceandPolymorphism {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Account[] accounts = {
+		            new SavingsAccount("Ana", 1000),
+		            new CheckingAccount("Ben", 200)
+		        };
+
+		        for (int round = 1; round <= 2; round++) {
+		            System.out.println("--- Round " + round + " ---");
+
+		            for (Account acc : accounts) {
+		                try {
+		                    acc.withdraw(600);   // calls the child's version
+		                    System.out.println(acc.owner + " withdrew 600. Balance: " + acc.balance);
+		                }
+		                catch (InsufficientFundsException e) {
+		                    System.out.println(acc.owner + ": " + e.getMessage()
+		                        + " Short by " + e.getShortfall());
+		                }
+		                finally {
+		                    System.out.println("Transaction finished for " + acc.owner);
+		                }
+		            }
+		        }
+
+		        try {
+		            accounts[0].deposit(-50);
+		        } catch (IllegalArgumentException e) {
+		            System.out.println("Error: " + e.getMessage());
+		        }
+	}
+
+}

@@ -1,0 +1,44 @@
+package inheritance.com;
+class Bag{
+	public void testament(String name) {
+		System.out.println(name + " is the best");
+	}
+	public void greetings() {
+		System.out.println("Bag's are one of the asset that a woman owned.");
+	}
+}
+class saintLaurent extends Bag {
+	
+	@Override
+	public void testament(String name) {
+		System.out.println(name + " is the best");
+		super.greetings();
+	}
+	public void issues() {
+		System.out.println("But this is not good quality");
+	}
+}
+class perfume extends saintLaurent{
+	public void perfumes() {
+		System.out.println("This has a nutty and vanill smell.");
+	}
+}
+public class Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bag bag = new Bag();
+		perfume per = new perfume();
+		saintLaurent saint = new saintLaurent();
+		
+		bag.testament("Guccie");
+		bag.greetings();
+		
+		saint.testament("Saint Laurent");
+		
+		per.perfumes();
+	
+		
+	}
+
+}

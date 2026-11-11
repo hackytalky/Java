@@ -1,0 +1,41 @@
+package inheritance.com;
+class Calculator{
+	private int num2;
+	private int num1;
+	
+	public void setNum1(int getnum1) {
+		num1 = getnum1;
+	}
+	public int getNum1() {
+		return num1;
+	}
+	
+	public void setNum2(int getnum2) {
+		num2 = getnum2;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	
+	public void greetings() {
+		System.out.println("Thanks you for the service!!");
+	}
+}
+class Addition extends Calculator{
+	public void results(int x, int y) {
+		setNum1(x);
+		setNum2(y);
+		System.out.println(getNum1() + " + " + getNum2());}
+	
+	
+}
+
+public class Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}

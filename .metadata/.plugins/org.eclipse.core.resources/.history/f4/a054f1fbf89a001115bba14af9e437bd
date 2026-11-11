@@ -1,0 +1,36 @@
+package com.Loop;
+
+import java.util.*;
+public class Exercise5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		int num = 0,factors = 2,reduce = 0,pr = 0;
+		
+		System.out.println("Enter the number: ");
+		num = input.nextInt();
+		
+		while(!(num == 1)) {
+			if(num % factors == 0) {
+				pr = factors;
+				reduce = num/factors;
+			}
+			if(!(num % factors == 0)) {
+				if(num % (factors+=1) == 0) {
+					pr = factors;
+					reduce = num/factors;
+				}
+			}
+			
+			num = reduce;
+			System.out.print(pr + " ");
+			
+			
+		
+			
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.Loop;
+
+public class Exercise7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j,n = 8,r,l;
+	
+		for(i = 1;i<n;i++) {
+			for(j = n;j>= i;j--) {
+				System.out.print("");
+			}
+			for(r = 1; r<=i; r++) {
+				System.out.print((int)Math.pow(3, r) + " ");
+			}
+			for(l = 2; l<=i;l++) {
+				System.out.print((int)Math.pow(3, l) + " ");
+			}
+			
+			System.out.println();
+		}
+		
+		
+	}	
+
+}

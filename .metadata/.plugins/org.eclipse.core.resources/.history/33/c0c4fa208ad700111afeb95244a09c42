@@ -1,0 +1,19 @@
+package excemption.com;
+
+public class exceptionHandling {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			int myInt = Integer.parseInt("2");	
+			
+		}
+		catch(NumberFormatException  e) {
+			System.out.println("This is not an interger.");
+		}
+		
+		System.out.println("It ends here!Exception Handling and Text I/O");
+	}
+
+}

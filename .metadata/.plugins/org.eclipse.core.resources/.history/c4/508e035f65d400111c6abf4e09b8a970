@@ -1,0 +1,81 @@
+package inheritance.com;
+import java.util.*;
+
+class Calculator{
+	private int num2;
+	private int num1;
+	
+	public void setNum1(int getnum1) {
+		num1 = getnum1;
+	}
+	public int getNum1() {
+		return num1;
+	}
+	
+	public void setNum2(int getnum2) {
+		num2 = getnum2;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	
+	public void greetings() {
+		System.out.println("Thanks you for the service!!");
+	}
+}
+class Addition extends Calculator{
+	public void results(int x, int y) {
+		setNum1(x);
+		setNum2(y);
+		int results = getNum1() + getNum2();
+		System.out.println(getNum1() + " + " + getNum2() + " = " + results);
+		super.greetings();
+	}
+	
+	
+}
+class Multiplication extends Calculator{
+
+	public void results(int x, int y) {
+		setNum1(x);
+		setNum2(y);
+		int results = getNum1() * getNum2();
+		System.out.println(getNum1() + " * " + getNum2() + " = " + results);
+		super.greetings();
+		}
+		
+}
+
+class Division extends Calculator{
+
+	public void results(int x, int y) {
+		setNum1(x);
+		setNum2(y);
+		int results = getNum1() / getNum2();
+		System.out.println(getNum1() + " / " + getNum2() + " = " + results);
+		super.greetings();
+		}
+		
+}
+
+public class Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Calculator sc = new Calculator();
+		Multiplication mul = new Multiplication();
+		Division div = new Division();
+		
+		int a = input.nextInt();
+		sc.setNum1(a);
+		int b = input.nextInt();
+		sc.setNum2(b);
+		
+		System.out.println("Results: ");
+		mul.results(a, b);
+		div.results(a, b);
+		
+	}
+
+}
