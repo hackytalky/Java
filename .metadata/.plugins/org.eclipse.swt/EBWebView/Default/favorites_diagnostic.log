@@ -1446,3 +1446,12 @@
 2026-11-03 13:43:32.527: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-11-03 13:43:32.527: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
 2026-11-03 15:05:08.736: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-11 07:52:11.344: [INFO] CurrentProfilePath: C:\Users\menia\OneDrive\Desktop\Software-Engineer-course\Chapter 1\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-11 07:52:11.344: [INFO] Profiles total count: 1
+2026-11-11 07:52:11.344: [INFO] Profile: name=Profile 1 path=C:\Users\menia\OneDrive\Desktop\Software-Engineer-course\Chapter 1\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-09T05:55:03.255Z
+2026-11-11 07:52:11.344: [INFO] LastUsedProfileDir: C:\Users\menia\OneDrive\Desktop\Software-Engineer-course\Chapter 1\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-11 07:52:11.344: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\menia\OneDrive\Desktop\Software-Engineer-course\Chapter 1\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-09T05:55:03.255Z
+2026-11-11 07:52:11.344: [INFO] OnDoneLoading sync enabled: 0
+2026-11-11 07:52:11.344: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-11 07:52:11.344: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-11 07:52:11.344: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
